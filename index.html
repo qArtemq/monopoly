@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Правила классической Монополии — Понятная иллюстрированная инструкция</title>
+  <meta name="description" content="Официальные правила классической настольной игры Монополия простым языком. Понятная иллюстрированная инструкция как в коробке, без заумных фраз и с наглядными примерами.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Верхняя панель книги правил -->
+  <header class="book-topbar">
+    <div class="topbar-inner">
+      <div class="book-logo">
+        <span class="logo-red-badge">МОНОПОЛИЯ</span>
+        <span class="logo-text">Иллюстрированная инструкция</span>
+      </div>
+      <div class="topbar-actions">
+        <button id="phone-qr-btn" class="paper-btn btn-phone" title="Открыть правила на смартфоне через QR-код">
+          <span>📱 Открыть на телефоне</span>
+        </button>
+        <button id="print-book-btn" class="paper-btn">
+          <span>🖨️ Распечатать правила</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контейнер книжного формата -->
+  <div class="book-layout">
+    
+    <!-- Боковое оглавление (для быстрой навигации) -->
+    <aside class="book-sidebar">
+      <div class="sidebar-sticky">
+        <div class="sidebar-title">📖 Оглавление</div>
+        <nav class="toc-nav">
+          <a href="#ch1" class="toc-link">1. В чем суть игры?</a>
+          <a href="#ch2" class="toc-link">2. Подготовка и деньги ($1 500)</a>
+          <a href="#ch3" class="toc-link">3. Как проходит ход</a>
+          <a href="#ch4" class="toc-link">4. Разбор всех клеток поля</a>
+          <a href="#ch5" class="toc-link">5. Тюрьма: вход, выход и доходы</a>
+          <a href="#ch6" class="toc-link">6. Строительство: Дома и Отели</a>
+          <a href="#ch7" class="toc-link">7. Залог и нехватка денег</a>
+          <a href="#ch8" class="toc-link">8. Торговля и сделки</a>
+          <a href="#ch9" class="toc-link">9. Банкротство и победа</a>
+          <a href="#ch10" class="toc-link">10. Шпаргалка: 5 главных споров</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Текстовое тело инструкции (как страницы книги) -->
+    <main class="book-page">
+
+      <!-- Титул инструкции -->
+      <section class="manual-title-block">
+        <div class="manual-badge">Классические правила настольной игры</div>
+        <h1 class="manual-heading">Как играть в Монополию</h1>
+        <p class="manual-lead">
+          Понятная инструкция для тех, кто вчера играл, читал официальный вкладыш и запутался. Здесь нет канцелярских оборотов — только логика, правила шаг за шагом и наглядные рисунки.
+        </p>
+      </section>
+
+      <!-- ГЛАВА 1 -->
+      <section id="ch1" class="manual-chapter">
+        <div class="chapter-num">Глава 1</div>
+        <h2 class="chapter-title">В чем суть игры?</h2>
+        
+        <p>
+          Монополия — это игра про управление недвижимостью. Вы ходите фишкой по кругу, покупаете улицы, строите на них дома и берете плату (ренту) с соперников, когда они наступают на ваши владения.
+        </p>
+
+        <div class="rule-box highlight">
+          <strong>🎯 Главная цель игры:</strong> Обанкротить всех остальных игроков. Победителем становится единственный оставшийся игрок с деньгами и недвижимостью.
+        </div>
+      </section>
+
+      <!-- ГЛАВА 2 -->
+      <section id="ch2" class="manual-chapter">
+        <div class="chapter-num">Глава 2</div>
+        <h2 class="chapter-title">Подготовка к игре за 2 минуты</h2>
+
+        <h3>1. Выберите Банкира</h3>
+        <p>
+          Один из игроков назначается Банкиром. Банкир может играть на общих основаниях, но он обязан строго отделять деньги Банка от своих личных денег.
+        </p>
+
+        <h3>2. Раздайте каждому ровно по $1 500</h3>
+        <p>
+          В начале игры каждый участник получает ровно <strong>$1 500</strong>. Чтобы не пересчитывать стопки по десять раз, раздайте каждому вот такой набор из <strong>16 купюр</strong>:
+        </p>
+
+        <!-- ИЛЛЮСТРАЦИЯ 1: Раскладка денег -->
+        <div class="illustration-card">
+          <div class="ill-caption">📌 Иллюстрация: Стартовый комплект купюр на одного игрока ($1 500)</div>
+          <div class="bills-visual-row">
+            <div class="paper-bill b-500">
+              <span class="b-count">2 шт.</span>
+              <span class="b-val">$500</span>
+              <span class="b-sum">=$1000</span>
+            </div>
+            <div class="paper-bill b-100">
+              <span class="b-count">4 шт.</span>
+              <span class="b-val">$100</span>
+              <span class="b-sum">=$400</span>
+            </div>
+            <div class="paper-bill b-50">
+              <span class="b-count">1 шт.</span>
+              <span class="b-val">$50</span>
+              <span class="b-sum">=$50</span>
+            </div>
+            <div class="paper-bill b-20">
+              <span class="b-count">1 шт.</span>
+              <span class="b-val">$20</span>
+              <span class="b-sum">=$20</span>
+            </div>
+            <div class="paper-bill b-10">
+              <span class="b-count">2 шт.</span>
+              <span class="b-val">$10</span>
+              <span class="b-sum">=$20</span>
+            </div>
+            <div class="paper-bill b-5">
+              <span class="b-count">1 шт.</span>
+              <span class="b-val">$5</span>
+              <span class="b-sum">=$5</span>
+            </div>
+            <div class="paper-bill b-1">
+              <span class="b-count">5 шт.</span>
+              <span class="b-val">$1</span>
+              <span class="b-sum">=$5</span>
+            </div>
+          </div>
+          <div class="ill-note">Все остальные деньги, карточки собственности, дома и отели остаются в Банке.</div>
+        </div>
+
+        <h3>3. Положите колоды на поле</h3>
+        <p>
+          Перетасуйте колоды <strong>«Шанс»</strong> и <strong>«Общественная казна»</strong> и положите их на специальные клетки в центре поля рубашкой вверх.
+        </p>
+
+        <h3>4. Поставьте фишки на «СТАРТ»</h3>
+        <p>
+          Каждый выбирает себе фишку и ставит её на клетку «ВПЕРЁД» (СТАРТ). Все игроки бросают кубики — у кого выпало больше очков, тот ходит первым. Дальше ходы передаются по часовой стрелке.
+        </p>
+      </section>
+
+      <!-- ГЛАВА 3 -->
+      <section id="ch3" class="manual-chapter">
+        <div class="chapter-num">Глава 3</div>
+        <h2 class="chapter-title">Как проходит ход игрока</h2>
+
+        <p>
+          Каждый ваш ход состоит ровно из трех простых шагов:
+        </p>
+
+        <!-- ИЛЛЮСТРАЦИЯ 2: Схема одного хода -->
+        <div class="illustration-card">
+          <div class="ill-caption">📌 Схема: Последовательность действий на вашем ходу</div>
+          <div class="turn-steps-diagram">
+            <div class="turn-step-box">
+              <div class="step-num-circle">1</div>
+              <strong>Бросьте 2 кубика</strong>
+              <p>Сложите выпавшие очки (например: 3 + 4 = 7).</p>
+            </div>
+            <div class="turn-arrow">➔</div>
+            <div class="turn-step-box">
+              <div class="step-num-circle">2</div>
+              <strong>Передвиньте фишку</strong>
+              <p>Пройдите вперед по часовой стрелке на это число клеток.</p>
+            </div>
+            <div class="turn-arrow">➔</div>
+            <div class="turn-step-box">
+              <div class="step-num-circle">3</div>
+              <strong>Сделайте действие клетки</strong>
+              <p>Купите улицу, заплатите ренту, возьмите карту или сядьте в тюрьму.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Что делать, если выпал ДУБЛЬ (одинаковые цифры)?</h3>
+        <ul>
+          <li><strong>1-й дубль:</strong> Вы делаете свой ход как обычно, а затем <strong>бросаете кубики еще раз</strong>!</li>
+          <li><strong>2-й дубль подряд:</strong> Снова ходите и бросаете в третий раз.</li>
+          <li><strong>3-й дубль подряд:</strong> 🚨 <strong>СТОП!</strong> Вы немедленно отправляетесь <strong>прямо в ТЮРЬМУ</strong>! Ход сразу завершается, выпавшие клетки вы не проходите.</li>
+        </ul>
+      </section>
+
+      <!-- ГЛАВА 4 -->
+      <section id="ch4" class="manual-chapter">
+        <div class="chapter-num">Глава 4</div>
+        <h2 class="chapter-title">Разбор всех клеток поля (Куда вы встали?)</h2>
+
+        <p>Поле состоит из 40 клеток. Вот что нужно делать, когда вы приземлились на конкретную клетку:</p>
+
+        <!-- 4.1 Свободная улица -->
+        <div class="subchapter-card">
+          <h4>🏷️ 1. Свободная улица (еще никем не куплена)</h4>
+          <p>У вас есть два пути:</p>
+          <div class="choice-split">
+            <div class="choice-item">
+              <strong>Вариант А: Купить по цене на поле</strong>
+              <p>Вы платите Банку указанную стоимость и забираете карточку собственности себе лицом вверх.</p>
+            </div>
+            <div class="choice-item alert-border">
+              <strong>Вариант Б: Отказаться → МГНОВЕННЫЙ АУКЦИОН!</strong>
+              <p>
+                Если вы не хотите или не можете купить улицу за полную цену, <strong>Банкир ОБЯЗАН тут же выставить ее на торги для ВСЕХ игроков</strong>!
+              </p>
+              <div class="rule-accent">
+                Торги начинаются с любой ставки (хоть с $1). Улицу забирает тот, кто предложит больше. Вы тоже можете торговаться и купить ее дешевле!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2 Чужая улица -->
+        <div class="subchapter-card">
+          <h4>🏠 2. Чужая улица (куплена другим игроком)</h4>
+          <p>
+            Вы обязаны заплатить владельцу <strong>ренту</strong>, размер которой написан на его карточке.
+          </p>
+          <div class="rule-box warning">
+            <strong>⚠️ Важное правило:</strong> Владелец обязан САМ заметить, что вы встали на его улицу, и потребовать деньги <strong>до того, как следующий игрок бросит кубики</strong>. Если он прозевал и кубики уже брошены — платить вы не обязаны!
+          </div>
+          <p>
+            <em>Если улица заложена в Банк (карточка лежит рубашкой вверх):</em> рента <strong>НЕ платится (0$)</strong>.
+          </p>
+        </div>
+
+        <!-- ИЛЛЮСТРАЦИЯ 3: Карточка улицы -->
+        <div class="illustration-card">
+          <div class="ill-caption">📌 Иллюстрация: Как устроена карточка улицы и откуда берется сумма ренты</div>
+          <div class="deed-breakdown">
+            <div class="sample-deed-card">
+              <div class="sample-deed-header" style="background:#FFA500;">
+                <div class="sample-tag">ДОКУМЕНТ НА СОБСТВЕННОСТЬ</div>
+                <div class="sample-title">УЛ. ВАВИЛОВА</div>
+              </div>
+              <div class="sample-deed-body">
+                <div class="sample-rent-base">РЕНТА: <strong>$14</strong></div>
+                <div class="sample-row"><span>С 1 домом 🏠</span> <strong>$70</strong></div>
+                <div class="sample-row"><span>С 2 домами 🏠🏠</span> <strong>$200</strong></div>
+                <div class="sample-row"><span>С 3 домами 🏠🏠🏠</span> <strong>$550</strong></div>
+                <div class="sample-row"><span>С 4 домами 🏠🏠🏠🏠</span> <strong>$750</strong></div>
+                <div class="sample-row highlight"><span>С ОТЕЛЕМ 🏨</span> <strong>$950</strong></div>
+                <div class="sample-footer">
+                  <div>Вся группа без домов: $28 (х2)</div>
+                  <div>Цена постройки 1 дома: $100</div>
+                  <div>Залог улицы: $90</div>
+                </div>
+              </div>
+            </div>
+            <div class="deed-explainer">
+              <div class="exp-item">
+                <span class="exp-bullet">1</span>
+                <div><strong>Базовая рента ($14):</strong> если у вас только эта улица.</div>
+              </div>
+              <div class="exp-item">
+                <span class="exp-bullet">2</span>
+                <div><strong>Монополия без домов ($28):</strong> если вы собрали все 3 оранжевые улицы, базовая рента сразу <strong>удваивается</strong>!</div>
+              </div>
+              <div class="exp-item">
+                <span class="exp-bullet">3</span>
+                <div><strong>С домами ($70 – $950):</strong> доход взлетает в десятки раз, когда вы строите домики.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.3 Вокзалы -->
+        <div class="subchapter-card">
+          <h4>🚂 3. Вокзалы (Железные дороги)</h4>
+          <p>Всего на поле 4 вокзала (стоят по $200). Дома на них не строятся. Рента зависит ТОЛЬКО от того, сколько вокзалов у одного владельца:</p>
+          <div class="simple-table-row">
+            <span class="st-cell">1 вокзал = <strong>$25</strong></span>
+            <span class="st-cell">2 вокзала = <strong>$50</strong></span>
+            <span class="st-cell">3 вокзала = <strong>$100</strong></span>
+            <span class="st-cell highlight">Все 4 вокзала = <strong>$200</strong></span>
+          </div>
+        </div>
+
+        <!-- 4.4 Предприятия -->
+        <div class="subchapter-card">
+          <h4>💡 4. Коммунальные предприятия (Электростанция и Водопровод)</h4>
+          <p>Стоят по $150. Рента считается через бросок кубиков того, кто на них наступил:</p>
+          <ul>
+            <li>Владелец держит <strong>1 предприятие</strong>: рента = выпавшая сумма кубиков × <strong>4</strong>. (Выпало 7 → платите $28).</li>
+            <li>Владелец держит <strong>оба предприятия</strong>: рента = выпавшая сумма кубиков × <strong>10</strong>! (Выпало 7 → платите $70).</li>
+          </ul>
+        </div>
+
+        <!-- 4.5 Клетка Вперед -->
+        <div class="subchapter-card">
+          <h4>🚩 5. Клетка «ВПЕРЁД» (СТАРТ)</h4>
+          <p>
+            Каждый раз, когда ваша фишка <strong>проходит через неё или встает ровно на неё</strong>, Банкир выплачивает вам <strong>$200 зарплаты</strong>.
+          </p>
+        </div>
+
+        <!-- 4.6 Бесплатная парковка -->
+        <div class="subchapter-card">
+          <h4>🅿️ 6. Бесплатная парковка (Главный миф!)</h4>
+          <!-- ИЛЛЮСТРАЦИЯ: Знак парковки -->
+          <div class="park-badge-block">
+            <div class="park-sign">🅿️</div>
+            <div class="park-text">
+              <strong>Бесплатная парковка — это просто место отдыха!</strong>
+              <p>Вы получаете ровно <strong>$0</strong>. Здесь ничего не происходит.</p>
+              <div class="myth-cross">
+                ❌ Налоги и штрафы НИКОГДА не кладутся в центр поля для парковки. Все налоги платятся СТРОГО В БАНК!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.7 Налоги -->
+        <div class="subchapter-card">
+          <h4>💸 7. Налоги (Подоходный налог $200 / Сверхналог $100)</h4>
+          <p>Заплатите указанную сумму наличными <strong>в Банк</strong>. Деньги уходят Банкиру и выходят из оборота игры.</p>
+        </div>
+
+        <!-- 4.8 Шанс и Казна -->
+        <div class="subchapter-card">
+          <h4>❓ 8. Клетки «Шанс» и «Общественная казна»</h4>
+          <p>
+            Возьмите верхнюю карту из колоды, громко прочитайте вслух, выполните приказ (получите деньги, заплатите штраф или передвиньте фишку) и положите карту под самый низ колоды.
+          </p>
+        </div>
+      </section>
+
+      <!-- ГЛАВА 5 -->
+      <section id="ch5" class="manual-chapter">
+        <div class="chapter-num">Глава 5</div>
+        <h2 class="chapter-title">Тюрьма: Как попасть, как выйти и почему это не страшно</h2>
+
+        <!-- ИЛЛЮСТРАЦИЯ 4: Угол тюрьмы -->
+        <div class="illustration-card">
+          <div class="ill-caption">📌 Схема: Как устроен угол поля «Тюрьма»</div>
+          <div class="jail-scheme-box">
+            <div class="jail-outer-zone">
+              <span class="jail-zone-tag">Внешняя зона: «ПРОЕЗДОМ» (Just Visiting)</span>
+              <p>Если вы встали сюда обычным броском кубиков — вы свободны! Фишка стоит с краю, штрафов нет, на следующем ходе идете дальше.</p>
+            </div>
+            <div class="jail-inner-zone">
+              <span class="jail-zone-tag-inner">Внутренняя зона: «В ЗАКЛЮЧЕНИИ» (In Jail) 🔒</span>
+              <p>Сюда фишку ставят, только если вас посадили за нарушение.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Как попадают в Тюрьму (ровно 3 причины):</h3>
+        <ol>
+          <li>Вы встали на клетку <strong>«Отправляйся в тюрьму»</strong> (в углу поля).</li>
+          <li>Вы вытянули карточку <strong>«Отправляйтесь в тюрьму»</strong> из Шанса или Казны.</li>
+          <li>У вас выпало <strong>3 дубля подряд</strong> на кубиках за один ход.</li>
+        </ol>
+        <p class="rule-box info">
+          *Когда вас отправляют в тюрьму, вы не проходите клетку «ВПЕРЁД» и <strong>$200 не получаете</strong>. Ход сразу заканчивается.
+        </p>
+
+        <h3>Как выйти из Тюрьмы (ровно 3 способа):</h3>
+        <div class="jail-exit-grid">
+          <div class="exit-card">
+            <strong>Способ 1: Заплатить $50</strong>
+            <p>В начале любого своего хода заплатите $50 в Банк, бросьте кубики и сразу идите на выпавшее число.</p>
+          </div>
+          <div class="exit-card">
+            <strong>Способ 2: Карточка</strong>
+            <p>Используйте карту «Бесплатный выход из тюрьмы» (свою или купите её у соперника за любую цену).</p>
+          </div>
+          <div class="exit-card">
+            <strong>Способ 3: Бросить дубль</strong>
+            <p>Бросайте кубики в свой ход. Выпал дубль? Вы свободны! Идите на выпавшее число (повторный бросок за этот дубль не делается).</p>
+          </div>
+        </div>
+
+        <div class="rule-box warning">
+          <strong>Правило 3-го хода (разбор на пальцах):</strong>
+          <p style="margin: 8px 0 6px;">Очень частый вопрос: <em>«Когда платить штраф и сколько шагов делать?»</em></p>
+          <ul style="margin: 0 0 8px 18px; font-size: 0.92rem;">
+            <li><strong>1-й ход в тюрьме:</strong> бросили кубики. Дубля нет? Остаетесь сидеть. Ходят другие.</li>
+            <li><strong>2-й ход в тюрьме:</strong> бросили кубики. Дубля нет? Остаетесь сидеть. Ходят другие.</li>
+            <li><strong>3-й ход в тюрьме:</strong> бросаете кубики. Допустим, выпало <strong>2 и 4</strong> (сумма <strong>6</strong>, не дубль). Попытки сгорели! Вы делаете следующее:
+              <ol style="margin-top: 6px;">
+                <li>Отдаете <strong>$50 в Банк</strong>.</li>
+                <li>И <strong>ПРЯМО СЕЙЧАС (в этот же 3-й ход!)</strong> передвигаете свою фишку на выпавшие <strong>6 клеток вперед</strong> от Тюрьмы!</li>
+              </ol>
+            </li>
+          </ul>
+          <p style="margin: 0; font-size: 0.88rem; color: #721c24;">
+            *Ждать следующего круга <strong>НЕ НУЖНО</strong>, и бросать кубики заново тоже <strong>НЕ НУЖНО</strong>. Вы просто оплачиваете $50 и сразу шагаете на выпавшее число.
+          </p>
+        </div>
+
+        <div class="rule-box highlight">
+          <strong>🔥 Главный секрет Тюрьмы:</strong> Находясь в тюрьме, вы <strong>СОХРАНЯЕТЕ ВСЕ ПРАВА</strong>! Соперники, наступая на ваши улицы, платят вам полную ренту! Вы можете строить дома, закладывать карты и участвовать в сделках. В конце игры сидеть в тюрьме даже выгодно — вы в безопасности от чужих отелей!
+        </div>
+      </section>
+
+      <!-- ГЛАВА 6 -->
+      <section id="ch6" class="manual-chapter">
+        <div class="chapter-num">Глава 6</div>
+        <h2 class="chapter-title">Строительство: Дома и Отели</h2>
+
+        <p>
+          Чтобы начать строить домики, вы должны сначала собрать <strong>полную монополию</strong> — владеть ВСЕМИ улицами одного цвета (например, всеми тремя оранжевыми).
+        </p>
+
+        <!-- ИЛЛЮСТРАЦИЯ 5: Правило равномерной застройки -->
+        <div class="illustration-card">
+          <div class="ill-caption">📌 Главное правило: Равномерная застройка улиц</div>
+          <div class="build-compare-row">
+            
+            <div class="compare-col correct">
+              <div class="badge-status ok">✅ ПРАВИЛЬНО (Равномерно)</div>
+              <div class="street-cluster">
+                <div class="mini-street"><span class="h-icon">🏠</span> 1 дом</div>
+                <div class="mini-street"><span class="h-icon">🏠</span> 1 дом</div>
+                <div class="mini-street"><span class="h-icon">🏠</span> 1 дом</div>
+              </div>
+              <p>Сначала поставили по 1 дому на каждую улицу группы. Только потом можно ставить вторые дома (2-2-2), затем третьи (3-3-3)!</p>
+            </div>
+
+            <div class="compare-col wrong">
+              <div class="badge-status err">❌ ОШИБКА (Хаотично)</div>
+              <div class="street-cluster">
+                <div class="mini-street"><span class="h-icon">🏠🏠🏠</span> 3 дома</div>
+                <div class="mini-street">0 домов</div>
+                <div class="mini-street">0 домов</div>
+              </div>
+              <p><strong>Так строить строго запрещено!</strong> Нельзя поставить второй дом на улицу, пока на соседних улицах этой группы нет хотя бы одного дома.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <h3>Как построить Отель?</h3>
+        <p>
+          Отель равен 5-му дому. Вы можете поставить отель на улицу, только когда на <strong>ВСЕХ</strong> улицах этой группы уже стоит ровно по 4 дома. При покупке отеля 4 дома возвращаются в Банк, а на улицу ставится красная фигурка отеля.
+        </p>
+
+        <div class="rule-box info">
+          <strong>📦 Закон дефицита (всего 32 дома):</strong> В игре ровно 32 зеленых дома и 12 отелей. Если домики в коробке закончились — строить нельзя никому, пока кто-то не продаст свои дома назад Банку! Заменять домики спичками запрещено правилами.
+        </div>
+      </section>
+
+      <!-- ГЛАВА 7 -->
+      <section id="ch7" class="manual-chapter">
+        <div class="chapter-num">Глава 7</div>
+        <h2 class="chapter-title">Не хватает денег: Залог и продажа</h2>
+
+        <p>
+          Если вы наступили на чужую улицу и вам не хватает наличных, чтобы оплатить ренту или налог, вы должны найти деньги следующими способами:
+        </p>
+
+        <h3>Шаг 1: Продайте дома Банку</h3>
+        <p>
+          Дома продаются ТОЛЬКО Банку за <strong>50% от их стоимости</strong> (написана на карточке). Продавать нужно тоже равномерно со всех улиц группы.
+        </p>
+
+        <h3>Шаг 2: Заложите улицу Банку</h3>
+        <p>
+          Если домов на улице нет (или вы их продали), вы можете заложить саму карточку улицы Банку:
+        </p>
+        <ul>
+          <li>Банк выплачивает вам <strong>сумму залога</strong> (указана на обороте карточки, ровно 50% её цены).</li>
+          <li>Карточка переворачивается лицом вниз.</li>
+          <li><strong>Пока карточка заложена, она приносит $0 ренты!</strong></li>
+        </ul>
+
+        <!-- ИЛЛЮСТРАЦИЯ 6: Как выкупить -->
+        <div class="illustration-card">
+          <div class="ill-caption">📌 Как выкупить карточку из залога обратно:</div>
+          <div class="mortgage-calc-box">
+            <div class="m-step">Сумма залога (на обороте)</div>
+            <div class="m-plus">+</div>
+            <div class="m-step">10% комиссионных Банку</div>
+            <div class="m-equals">=</div>
+            <div class="m-step res">Карточка снова активна!</div>
+          </div>
+          <div class="ill-note"><em>Пример:</em> Залог улицы составлял $100. Чтобы выкупить её обратно, владелец платит Банку $110 ($100 + $10).</div>
+        </div>
+
+        <div class="rule-box info">
+          <strong>💡 А может ли Банк дать кредит наличными? НЕТ!</strong>
+          <p style="margin: 6px 0 0;">
+            В Монополии нет потребительских кредитов, рассрочек или займов «под честное слово». Банк работает исключительно как <strong>ломбард</strong>: вы получаете деньги ТОЛЬКО под залог своих свободных улиц (ровно 50% от их стоимости на обороте). Если у вас нет недвижимости — Банк не даст вам ни цента.
+          </p>
+        </div>
+      </section>
+
+      <!-- ГЛАВА 8 -->
+      <section id="ch8" class="manual-chapter">
+        <div class="chapter-num">Глава 8</div>
+        <h2 class="chapter-title">Торговля и сделки между игроками</h2>
+
+        <p>
+          Торговать можно в любой момент игры — даже между чужими ходами.
+        </p>
+
+        <div class="trade-rules-grid">
+          <div class="trade-col good">
+            <h4>✅ ЧТО МОЖНО:</h4>
+            <ul>
+              <li>Продавать и обменивать улицы за любую договорную цену (хоть за $1, хоть за $1 000).</li>
+              <li>Менять улицы на другие улицы, наличные или карточки выхода из тюрьмы.</li>
+              <li><strong>Продавать заложенные улицы</strong> другим игрокам (подробный разбор ниже).</li>
+            </ul>
+          </div>
+          <div class="trade-col bad">
+            <h4>❌ ЧТО СТРОГО ЗАПРЕЩЕНО:</h4>
+            <ul>
+              <li><strong>Нельзя продавать улицу с домами</strong> — сначала продайте все дома Банку за полцены!</li>
+              <li><strong>Нельзя давать деньги в долг игрокам</strong> (запрещены микрозаймы вроде <em>«дай $50, а я на следующем круге верну $70»</em>). Нет денег — закладывай улицы Банку или объявляй банкротство.</li>
+              <li><strong>Нельзя обещать «иммунитеты»</strong> вроде <em>«отдай мне улицу, и я никогда не буду брать с тебя ренту»</em>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ПОДРОБНЫЙ РАЗБОР ПРОДАЖИ ЗАЛОЖЕННОЙ УЛИЦЫ -->
+        <div class="illustration-card" style="margin-top: 24px;">
+          <div class="ill-caption">📌 Разбор на пальцах: Как продать заложенную улицу другому игроку</div>
+          <p style="font-size: 0.95rem; margin-bottom: 12px;">
+            Допустим, у Васи есть улица, заложенная в Банк (залог на обороте = <strong>$100</strong>). Вася продает эту карточку Пете за <strong>$50</strong> наличными.
+          </p>
+          <div class="deed-explainer" style="background:#fff; padding:16px; border:1px solid var(--paper-border); border-radius:8px;">
+            <div class="exp-item">
+              <span class="exp-bullet">1</span>
+              <div>
+                <strong>Что получает Вася (продавец)?</strong> Вася забирает свои $50 от Пети и свободен — он Банку больше ничего не должен.
+              </div>
+            </div>
+            <div class="exp-item">
+              <span class="exp-bullet">2</span>
+              <div>
+                <strong>Что теперь должен Петя (покупатель)?</strong> Петя держит карту рубашкой вверх. У него есть ровно <strong>2 варианта на выбор</strong>:
+                <ul style="margin: 8px 0 0 16px; font-size: 0.9rem;">
+                  <li>
+                    <strong>Вариант А (Сразу ввести улицу в игру):</strong> Петя сразу платит Банку залог ($100) + 10% налога ($10) = <strong>$110</strong>. Карточка переворачивается лицом вверх и сразу начинает приносить ренту!
+                  </li>
+                  <li>
+                    <strong>Вариант Б (Оставить в залоге на потом):</strong> Если у Пети сейчас мало денег, он платит Банку <strong>ТОЛЬКО 10% налога прямо сейчас ($10)</strong>. Карточка остается лежать рубашкой вверх (ренту не приносит). Но когда позже Петя решит её выкупить, он должен будет заплатить Банку $100 залога + <strong>ЕЩЕ РАЗ 10% ($10)</strong>!
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- ГЛАВА 9 -->
+      <section id="ch9" class="manual-chapter">
+        <div class="chapter-num">Глава 9</div>
+        <h2 class="chapter-title">Банкротство и Победа</h2>
+
+        <p>
+          Если вы продали все дома, заложили все улицы, но вам все равно нечем оплатить долг — вы объявляетесь <strong>БАНКРОТОМ</strong> и выбываете из игры.
+        </p>
+
+        <div class="bankruptcy-boxes">
+          <div class="b-box">
+            <strong>Если вы должны ДРУГОМУ ИГРОКУ:</strong>
+            <p>Вы отдаете ему все оставшиеся деньги и все свои заложенные улицы. Этот игрок теперь владеет ими (но выбывший игрок полностью покидает партию).</p>
+          </div>
+          <div class="b-box">
+            <strong>Если вы должны БАНКУ (налог или штраф):</strong>
+            <p>Все ваши улицы аннулируются, и Банкир немедленно проводит открытый <strong>АУКЦИОН</strong> на каждую вашу улицу между оставшимися игроками!</p>
+          </div>
+        </div>
+
+        <!-- РАЗБОР ВОПРОСА: ЧТО ДЕЛАТЬ С ЗАЛОЖЕННЫМИ УЛИЦАМИ ОБАНКРОТИВШЕГОСЯ? -->
+        <div class="illustration-card" style="margin-top: 20px;">
+          <div class="ill-caption">📌 Частый вопрос: Соперник обанкротился и отдал мне заложенные улицы. Обязан ли я их выкупать?</div>
+          <div style="font-size: 0.95rem; line-height: 1.6;">
+            <p style="margin-bottom: 10px;">
+              <strong>Короткий ответ: СРАЗУ ВЫКУПАТЬ НЕ ОБЯЗАТЕЛЬНО!</strong> Карточки теперь ваши навсегда, но вот как с ними поступить:
+            </p>
+            <ol style="margin-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+              <li>
+                <strong>Обязательный платеж сразу:</strong> За каждую принятую заложенную карточку вы обязаны немедленно заплатить Банку <strong>10% налога</strong>.
+              </li>
+              <li>
+                <strong>Выкупать ли саму улицу?</strong> На ваше усмотрение:
+                <ul style="margin: 6px 0 0 16px;">
+                  <li><strong>Если денег жалко:</strong> карточки просто лежат у вас рубашкой вверх. Они пока приносят <strong>0$ ренты</strong>, но монополия цвета уже у вас в руках! Выкупите их потом, когда разбогатеете (заплатив залог + еще раз 10%).</li>
+                  <li><strong>Если есть свободные деньги:</strong> вы можете сразу оплатить залог Банку и перевернуть их лицом вверх — тогда они сразу начнут приносить вам ренту!</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="rule-box highlight">
+          <strong>🏆 ПОБЕДИТЕЛЬ:</strong> Последний оставшийся в живых игрок объявляется абсолютным Монополистом и победителем игры!
+        </div>
+      </section>
+
+      <!-- ГЛАВА 10 -->
+      <section id="ch10" class="manual-chapter">
+        <div class="chapter-num">Глава 10</div>
+        <h2 class="chapter-title">Шпаргалка: 5 главных споров за столом</h2>
+
+        <p>Распечатайте этот список или откройте на телефоне во время игры, когда возникнет спор:</p>
+
+        <div class="cheat-faq-list">
+          <div class="cheat-item">
+            <div class="cheat-q">1. Куда идут деньги с налогов и штрафов?</div>
+            <div class="cheat-a"><strong>СТРОГО В БАНК.</strong> Бесплатная парковка приносит 0$. На ней нет никакого банка с деньгами!</div>
+          </div>
+          <div class="cheat-item">
+            <div class="cheat-q">2. Игрок не хочет покупать свободную улицу, что делать?</div>
+            <div class="cheat-a"><strong>БАНКИР ОБЯЗАН СРАЗУ ОБЪЯВИТЬ АУКЦИОН.</strong> Начальная ставка $1. Участвуют все игроки. Улица обязательно продается с молотка.</div>
+          </div>
+          <div class="cheat-item">
+            <div class="cheat-q">3. Получает ли игрок ренту, пока сидит в Тюрьме?</div>
+            <div class="cheat-a"><strong>ДА, В ПОЛНОМ ОБЪЕМЕ.</strong> Сидя за решеткой, вы собираете ренту, строите дома и совершаете сделки.</div>
+          </div>
+          <div class="cheat-item">
+            <div class="cheat-q">4. Можно ли поставить отель сразу на Арбат?</div>
+            <div class="cheat-a"><strong>НЕТ.</strong> Действует правило равномерной застройки. На Малой Бронной должно стоять 4 дома, прежде чем на Арбате появится отель.</div>
+          </div>
+          <div class="cheat-item">
+            <div class="cheat-q">5. В Банке закончились бумажные деньги, игра окончена?</div>
+            <div class="cheat-a"><strong>НЕТ, БАНК БЕСКОНЕЧЕН.</strong> Банкир берет лист бумаги и ручку и записывает деньги долговыми расписками. Банк никогда не банкротится.</div>
+          </div>
+          <div class="cheat-item">
+            <div class="cheat-q">6. Если не выбросил дубль 3 раза в Тюрьме: когда и на сколько шагов ходить после оплаты $50?</div>
+            <div class="cheat-a"><strong>ПРЯМО СЕЙЧАС (В ЭТОТ ЖЕ 3-Й ХОД)!</strong> Вы отдаете $50 в Банк и сразу шагаете на то число, которое только что выпало на кубиках в этом 3-м броске. Ждать следующего круга НЕ нужно, бросать кубики заново тоже НЕ нужно.</div>
+          </div>
+          <div class="cheat-item">
+            <div class="cheat-q">7. Банкрот отдал мне все свои заложенные улицы: обязан ли я их выкупать?</div>
+            <div class="cheat-a"><strong>НЕТ, СРАЗУ ВЫКУПАТЬ НЕ ОБЯЗАТЕЛЬНО!</strong> Вы обязаны только сразу заплатить Банку 10% налога за каждую карточку. Сами улицы могут лежать у вас в залоге сколько угодно (ренту не приносят, но дают монополию цвета). Выкупите их тогда, когда появятся свободные деньги.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Подвал буклета -->
+      <footer class="manual-footer">
+        <p>Официальные классические правила настольной игры Монополия (Parker Brothers / Hasbro).</p>
+        <p>Сохраните страницу в закладки или распечатайте для удобной игры дома и с друзьями.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Плавающая мобильная панель навигации (видна только на телефонах) -->
+  <div class="mobile-bottom-bar">
+    <button id="mobile-toc-btn" class="m-bar-btn">
+      <span class="m-icon">📖</span>
+      <span>Оглавление</span>
+    </button>
+    <button id="mobile-top-btn" class="m-bar-btn">
+      <span class="m-icon">⬆️</span>
+      <span>Наверх</span>
+    </button>
+  </div>
+
+  <!-- Мобильное всплывающее меню глав (Drawer) -->
+  <div id="mobile-drawer-overlay" class="drawer-overlay hidden">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <span class="drawer-title">📖 Главы инструкции</span>
+        <button id="close-drawer-btn" class="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-links-list">
+        <a href="#ch1" class="drawer-link">1. В чем суть игры?</a>
+        <a href="#ch2" class="drawer-link">2. Подготовка и деньги ($1 500)</a>
+        <a href="#ch3" class="drawer-link">3. Как проходит ход</a>
+        <a href="#ch4" class="drawer-link">4. Разбор всех клеток поля</a>
+        <a href="#ch5" class="drawer-link">5. Тюрьма: вход, выход и доходы</a>
+        <a href="#ch6" class="drawer-link">6. Строительство: Дома и Отели</a>
+        <a href="#ch7" class="drawer-link">7. Залог и нехватка денег</a>
+        <a href="#ch8" class="drawer-link">8. Торговля и сделки</a>
+        <a href="#ch9" class="drawer-link">9. Банкротство и победа</a>
+        <a href="#ch10" class="drawer-link">10. Шпаргалка: 5 главных споров</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно с QR-кодом для телефона -->
+  <div id="qr-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">📱 Открыть правила на телефоне</div>
+        <button id="close-qr-btn" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Наведите камеру смартфона на этот QR-код, чтобы мгновенно открыть правила на телефоне (телефон должен быть подключен к той же Wi-Fi сети):
+        </p>
+
+        <div class="qr-container">
+          <img id="qr-image" src="" alt="QR-код для мобильного" class="qr-code-img">
+        </div>
+
+        <div class="ip-link-box">
+          <span class="ip-label">Прямой адрес для браузера:</span>
+          <div class="ip-address-row">
+            <input type="text" id="phone-url-input" readonly value="http://192.168.31.151:8080/index.html">
+            <button id="copy-url-btn" class="paper-btn btn-sm">Копировать</button>
+          </div>
+          <span id="copy-status" class="copy-hint hidden">Скопировано в буфер!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
